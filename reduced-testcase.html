@@ -1,0 +1,32 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery AJAX Test</title>
+    </head>
+    <body>
+        <script src="lib/jquery.js"></script>
+        <script src="lib/sinon.js"></script>
+        <script>
+            var requests = [];
+            var ajax = sinon.useFakeXMLHttpRequest(); // replaces native XHR/ActiveXObject
+                ajax.onCreate = function(xhr) {
+                    requests.push(xhr);
+                }
+
+            var spy = sinon.spy();
+
+            $.ajax({
+                url: './Gruntfile.js',
+                success: spy
+            });
+
+            requests[0].respond(200, { "Content-Type": "application/json" }, '[{ "id": 123, "comment": "Hey there" }]');
+
+            console.log(requests);
+            console.log(spy);
+            console.log(spy.called);
+        </script>
+    </body>
+</html>

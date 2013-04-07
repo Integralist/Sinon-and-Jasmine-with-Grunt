@@ -31,7 +31,7 @@ module.exports = function (grunt) {
             src: ['app/**/*.js', '!app/release/**'],
             options: {
                 specs: 'specs/**/*Spec.js',
-                helpers: ['lib/sinon.js', 'specs/helpers/*Helper.js']
+                helpers: ['lib/jquery.js', 'lib/sinon.js', 'specs/helpers/*Helper.js']
             }
         },
 
