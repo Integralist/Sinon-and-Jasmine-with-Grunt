@@ -1,0 +1,26 @@
+{
+  "name": "Sinon",
+  "version": "0.0.0",
+  "description": "Testing Sinon with Jasmine within Grunt",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Integralist/Sinon-and-Jasmine-with-Grunt.git"
+  },
+  "keywords": [
+    "Sinon",
+    "Jasmine",
+    "Grunt"
+  ],
+  "author": "Mark McDonnell",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-jshint": "~0.4.1",
+    "grunt-contrib-jasmine": "~0.4.2"
+  }
+}
